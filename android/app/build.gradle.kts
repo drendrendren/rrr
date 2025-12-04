@@ -30,8 +30,8 @@ android {
         applicationId = "com.rrrtr.android"
         minSdk = 21
         targetSdk = 35
-        versionCode = 9      // 숫자, 업데이트할 때마다 증가
-        versionName = "1.4.1" // 사용자에게 보여지는 버전
+        versionCode = 10      // 숫자, 업데이트할 때마다 증가
+        versionName = "1.4.3" // 사용자에게 보여지는 버전
     }
 
     signingConfigs {

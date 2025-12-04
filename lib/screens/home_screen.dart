@@ -58,9 +58,7 @@ class _HomeScreenState extends State<HomeScreen>
       if (s == AnimationStatus.dismissed) dogLangRecordingPulse.forward();
     });
     loadTranslatorStatus();
-    Future.delayed(const Duration(seconds: 5), () {
-      _checkMonthlyReview();
-    });
+    _checkMonthlyReview();
   }
 
   // input 문장에 key 없을 때에도 매번 같은 소리 나오도록 하기 위해 사용함
@@ -191,8 +189,6 @@ class _HomeScreenState extends State<HomeScreen>
   // shared preferences로 관리
   // UUU android도 추후 추가하기
   Future<void> _checkMonthlyReview() async {
-    if (!Platform.isIOS) return;
-
     final prefs = await SharedPreferences.getInstance();
     final now = DateTime.now();
 
